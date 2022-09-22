@@ -29,43 +29,6 @@ import java.util.List;
 @EnableSwagger2
 public class SwaggerConfig {
 
-//    private ApiKey apiKey() {
-//        return new ApiKey("JWT", "Authorization", "header");
-//    }
-//
-//    private SecurityContext securityContext() {
-//        return SecurityContext.builder().securityReferences(defaultAuth()).build();
-//    }
-//
-//    private List<SecurityReference> defaultAuth() {
-//        AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
-//        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
-//        authorizationScopes[0] = authorizationScope;
-//        return Collections.singletonList(new SecurityReference("JWT", authorizationScopes));
-//    }
-//
-//    ApiInfo apiInfo() {
-//        return new ApiInfoBuilder()
-//                .title("Swagger with Spring Boot + Security")
-//                .version("1.0.0")
-//                .description("Your Description")
-//                .contact(new Contact("murat ersoy", "https://www.linkedin.com/in/murat-ersoy-57a177117/","muratersoy91@gmail.com"))
-//                .build();
-//    }
-//
-//    @Bean
-//    public Docket api() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .apiInfo(apiInfo())
-//                .securityContexts(Arrays.asList(securityContext()))
-//                .securitySchemes(Arrays.asList(apiKey()))
-//                .select()
-//                .apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any())
-//                .build();
-//    }
-
-
     public static final String AUTHORIZATION_HEADER = "Authorization";
 
     ApiInfo apiInfo() {
@@ -106,7 +69,5 @@ public class SwaggerConfig {
         authorizationScopes[0] = authorizationScope;
         return Arrays.asList(new SecurityReference("JWT", authorizationScopes));
     }
-
-
 
 }
