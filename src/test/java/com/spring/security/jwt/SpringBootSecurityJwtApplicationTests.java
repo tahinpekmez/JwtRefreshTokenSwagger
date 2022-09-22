@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.jwt;
+package com.spring.security.jwt;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,5 +12,4 @@ public class SpringBootSecurityJwtApplicationTests {
   @Test
   public void contextLoads() {
   }
-
 }
